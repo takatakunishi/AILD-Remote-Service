@@ -48,6 +48,11 @@ class SuiseiService : Service() {
         return binder
     }
 
+    override fun onUnbind(intent: Intent?): Boolean {
+        Log.d("suisei service in service","on unbind")
+        return super.onUnbind(intent)
+    }
+
     override fun onDestroy() {
         super.onDestroy()
         Log.d("suisei service in service", "stop suisei service")
